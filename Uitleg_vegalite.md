@@ -1,3 +1,5 @@
+- [Uitleg van de Vega‑Lite visualisatie](#Uitleg-van-de-Vega‑Lite-visualisatie)
+- [Wat kun je doen in encoding (Vega‑Lite)?](#wat-kun-je-doen-in-encoding-vega-lite)
 ### Uitleg van de Vega‑Lite visualisatie
 
 **Mark**  
@@ -17,6 +19,7 @@ De y‑as telt (`aggregate: "count"`) het aantal waarden van `lokaal_leerlingnum
 Het type is `quantitative`, omdat het resultaat een **numerieke waarde** is.  
 Elke staaf laat zo zien hoeveel leerlingen er per schooljaar zijn.
 
+
 ```json
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -35,36 +38,36 @@ Elke staaf laat zo zien hoeveel leerlingen er per schooljaar zijn.
   }
 }
 ```
-## Wat kun je doen in `encoding` (Vega‑Lite)?
+### Wat kun je doen in `encoding` (Vega‑Lite)?
 
 De `encoding` bepaalt **hoe data wordt gekoppeld aan visuele eigenschappen** van een chart.
 
-### Positie
+**Positie**
 - `x`, `y` – plaats data op de as  
 - `x2`, `y2` – maak bereiken (bv. waterfall, gantt)
 
-### Uiterlijk
+**Uiterlijk**
 - `color` – kleur op basis van data  
 - `size` – grootte (punten, tekst)  
 - `opacity` – transparantie  
 - `shape` – vorm (bij puntgrafieken)
 
-### Informatie
+**Informatie**
 - `text` – labels op marks  
 - `tooltip` – informatie bij hover
 
-### Structuur & groepering
+**Structuur & groepering**
 - `detail` – groeperen zonder visuele verandering  
 - `order` – tekenvolgorde (bij stacking)  
 - `row`, `column`, `facet` – small multiples
 
-### Wat er meestal in een encoding zit
+**Wat er meestal in een encoding zit**
 - `field` – welk veld uit je data  
 - `type` – `quantitative`, `ordinal`, `nominal`, `temporal`  
 - `aggregate` – zoals `sum`, `count`, `mean`  
 - `scale`, `axis`, `legend` – hoe het eruitziet
 
-### Wat niet in `encoding` hoort
+**Wat niet in `encoding` hoort**
 - Berekeningen → `transform`  
 - Styling → `mark`  
 - Interactie → `params`
