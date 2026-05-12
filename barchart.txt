@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": { "name": "dataset" },
+
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "field": "lokaal_leerlingnummer",
+          "as": "waarde"
+        }
+      ],
+      "groupby": ["schooljaar"]
+    }
+  ],
+
+  "mark": "bar",
+
+  "encoding": {
+    "x": {
+      "field": "schooljaar",
+      "type": "ordinal",
+      "title": "Schooljaar"
+    },
+    "y": {
+      "field": "waarde",
+      "type": "quantitative",
+      "title": "Aantal leerlingen"
+    },
+    "color": {
+      "field": "waarde",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues"
+      },
+      "legend": {
+        "title": "Aantal leerlingen"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "waarde",
+        "type": "quantitative",
+        "title": "Aantal leerlingen"
+      }
+    ]
+  }
+}
