@@ -34,3 +34,39 @@ Elke staaf laat zo zien hoeveel leerlingen er per schooljaar zijn.
     }
   }
 }
+```
+## Wat kun je doen in `encoding` (Vega‑Lite)?
+
+De `encoding` bepaalt **hoe data wordt gekoppeld aan visuele eigenschappen** van een chart.
+
+### Positie
+- `x`, `y` – plaats data op de as  
+- `x2`, `y2` – maak bereiken (bv. waterfall, gantt)
+
+### Uiterlijk
+- `color` – kleur op basis van data  
+- `size` – grootte (punten, tekst)  
+- `opacity` – transparantie  
+- `shape` – vorm (bij puntgrafieken)
+
+### Informatie
+- `text` – labels op marks  
+- `tooltip` – informatie bij hover
+
+### Structuur & groepering
+- `detail` – groeperen zonder visuele verandering  
+- `order` – tekenvolgorde (bij stacking)  
+- `row`, `column`, `facet` – small multiples
+
+### Wat er meestal in een encoding zit
+- `field` – welk veld uit je data  
+- `type` – `quantitative`, `ordinal`, `nominal`, `temporal`  
+- `aggregate` – zoals `sum`, `count`, `mean`  
+- `scale`, `axis`, `legend` – hoe het eruitziet
+
+### Wat niet in `encoding` hoort
+- Berekeningen → `transform`  
+- Styling → `mark`  
+- Interactie → `params`
+
+Kort gezegd: **`encoding` vertaalt je data naar wat je ziet.**
