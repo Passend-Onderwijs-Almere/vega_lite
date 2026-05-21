@@ -18,7 +18,7 @@
     },
 
     {
-      "calculate": "datum.aangepast == '1. Werkhouding / taakaanpak' ? 1 : datum.aangepast == '2. Sociaal-emotioneel / gedrag' ? 2 : datum.aangepast == '3. Context / systeem' ? 3 : datum.aangepast == '4. Fysiek / motorisch' ? 4 : datum.aangepast == '5. Communicatie / taal' ? 5 : datum.aangepast == '6. Leren / cognitief' ? 6 : null",
+      "calculate": "datum.aangepast == '1. Leren / cognitief' ? 1 : datum.aangepast == '2. Werkhouding / taakaanpak' ? 2 : datum.aangepast == '3. Sociaal-emotioneel / gedrag' ? 3 : datum.aangepast == '4. Fysiek / motorisch' ? 4 : datum.aangepast == '5. Communicatie / taal' ? 5 : datum.aangepast == '6. Context / systeem' ? 6 : null",
       "as": "catIndex"
     },
 
